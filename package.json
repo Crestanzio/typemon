@@ -1,0 +1,47 @@
+{
+  "name": "@crestanzio/typemon",
+  "author": "Crestanzio",
+  "description": "A watcher for all events (rename, delete, etc.), built to work parallel with typescript watch.",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crestanzio/typemon.git"
+  },
+  "private": false,
+  "main": "build/watcher.js",
+  "type": "module",
+  "files": [
+    "build"
+  ],
+  "bin": {
+    "typemon": "build/bin/index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "watcher": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.12.11",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "start": "node build/watcher.js",
+    "prebuild": "rm -rf ./build",
+    "build": "tsc",
+    "postbuild": "rsync -a --exclude='*.ts' ./src/ ./build/"
+  },
+  "keywords": [
+    "fs",
+    "file",
+    "system",
+    "filesystem",
+    "monitor",
+    "watch",
+    "watcher",
+    "ts",
+    "tsc",
+    "typescript",
+    "typemon"
+  ]
+}

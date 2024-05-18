@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    // Compile
+    "rootDir": "src",
+    "outDir": "build",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "moduleDetection": "force",
+    // "resolveJsonModule": true,
+    // "incremental": true,
+
+    // Type Checking
+    "strict": true,
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowUnreachableCode": false,
+    "forceConsistentCasingInFileNames": true,
+
+    // Helpers function
+    "noEmitHelpers": true
+  },
+  "watchOptions": {
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["node_modules", "build"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}
