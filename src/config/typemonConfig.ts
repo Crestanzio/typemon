@@ -11,11 +11,11 @@ let typemonConfig = packageJSON?.typemonConfig;
  */
 
 typemonConfig = {
-    customTsConfigPath: typemonConfig?.tsConfig,
     main: typemonConfig?.main,
+    tsConfig: typemonConfig?.tsConfig,
     delay: typemonConfig?.delay * 1000 // Convert sec to ms because of setTimeout, see ./monitor.ts
 }
 
-validateTsConfigFileName(typemonConfig.customTsConfigPath);
+validateTsConfigFileName(typemonConfig.tsConfig);
 
 export { typemonConfig, packageJsonMain };

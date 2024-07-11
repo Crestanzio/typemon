@@ -35,6 +35,7 @@ function handleAddFile(file: string) {
 function handleDeleteFile(file: string) {
   if (file.endsWith(".ts")) {
     fs.remove(getDestPath(file).replace(".ts", ".js"));
+    fs.remove(getDestPath(file).replace(".ts", ".js.map"));
   } else {
     fs.remove(getDestPath(file));
   }
@@ -43,6 +44,7 @@ function handleDeleteFile(file: string) {
 function handleRenameFile(prev: string, next: string) {
   if (prev.endsWith(".ts")) {
     fs.remove(getDestPath(prev).replace(".ts", ".js"));
+    fs.remove(getDestPath(prev).replace(".ts", ".js.map"));
   } else {
     fs.remove(getDestPath(prev));
     fs.copy(next, getDestPath(next));

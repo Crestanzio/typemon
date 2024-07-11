@@ -1,6 +1,17 @@
-# Folders
+# dependencies
 /node_modules
+
+# production
 /build
 
-# Files
-/TODO.md
+# environments
+.env.local
+.env.test.local
+.env.development.local
+.env.production.local
+
+# misc
+TODO.md
+
+# tests
+/src/test.ts

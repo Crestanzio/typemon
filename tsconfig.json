@@ -7,8 +7,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "moduleDetection": "force",
-    // "resolveJsonModule": true,
+    // "moduleDetection": "force",
     // "incremental": true,
 
     // Type Checking

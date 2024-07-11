@@ -20,6 +20,7 @@ specifically:
 > - renameDir
 
 # Installation
+
 install typemon global:
 ```bash
 npm install -g typemon # or using yarn: yarn global add typemon
@@ -31,13 +32,13 @@ npm install --save-dev typemon # or using yarn: yarn add typemon -D
 ```
 
 # Usage
-### On the fly
+
+use typemon on the fly:
 ```bash
 npx -c 'tsc --watch & typemon' # run without install the package
 ```
 
-### locally
-Just declare the typescript watch in parallel with typemon as start script.
+use typemon locally like this:
 ```json
 
 "scripts": {
@@ -67,6 +68,7 @@ Also, requires an ```tsconfig.json || tsconfig.anything.json```. default is ```t
 Is looking for the options ```rootDir``` and ```outDir```. if an option is not found, current working directory gonna used as default.
 
 # Example
+
 ### package.json
 ```json
 {
@@ -91,11 +93,12 @@ Is looking for the options ```rootDir``` and ```outDir```. if an option is not f
 
 ```json
   "scripts":  {
-    "start":  "tsc --watch & typemon",
+    "prestart": "npm run build",
+    "start":  "tsc --watch --sourceMap & typemon",
     "prebuild":  "rm -rf ./build",
     "build":  "tsc",
     "postbuild":  "rsync -a --exclude='*.ts' ./src/ ./build/"
   },
 ```
 
-This way on a build process you have a new clear build directory with all the necessary files included.
+This way on a build process you have a new clear build directory with all the necessary files included, also you can see where is the error in typescript files.

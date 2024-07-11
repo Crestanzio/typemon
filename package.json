@@ -8,10 +8,11 @@
     "url": "https://github.com/crestanzio/typemon.git"
   },
   "private": false,
-  "main": "build/watcher.js",
+  "main": "build/test.js",
   "type": "module",
   "files": [
-    "build"
+    "build",
+    "!build/test.js"
   ],
   "bin": {
     "typemon": "build/bin/index.js"
@@ -26,7 +27,8 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "start": "node build/watcher.js",
+    "prestart": "npm run build",
+    "start": "tsc --watch --sourceMap & node build/bin/index.js",
     "prebuild": "rm -rf ./build",
     "build": "tsc",
     "postbuild": "rsync -a --exclude='*.ts' ./src/ ./build/"
