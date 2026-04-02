@@ -23,26 +23,26 @@ specifically:
 
 install typemon global:
 ```bash
-npm install -g typemon # or using yarn: yarn global add typemon
+npm install -g @crestanzio/typemon # or using yarn: yarn global add @crestanzio/typemon
 ```
 
 install typemon as dev dependency:
 ```bash
-npm install --save-dev typemon # or using yarn: yarn add typemon -D
+npm install --save-dev @crestanzio/typemon # or using yarn: yarn add @crestanzio/typemon -D
 ```
 
 # Usage
 
 use typemon on the fly:
 ```bash
-npx -c 'tsc --watch & typemon' # run without install the package
+npx -c 'tsc --watch & @crestanzio/typemon' # run without install the package
 ```
 
 use typemon locally like this:
 ```json
 
 "scripts": {
-	"start": "tsc --watch & typemon"
+	"start": "tsc --watch & @crestanzio/typemon"
 }
 ```
 
