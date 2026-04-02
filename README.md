@@ -42,7 +42,7 @@ use typemon locally like this:
 ```json
 
 "scripts": {
-	"start": "tsc --watch & @crestanzio/typemon"
+	"start": "tsc --watch & typemon"
 }
 ```
 
